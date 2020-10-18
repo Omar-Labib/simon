@@ -13,6 +13,14 @@ $(document).keypress(function () {
     started = true;
   }
 });
+$(".BUTTON_PFP").click(function () {
+  if (!started) {
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    started = true;
+    $(".BUTTON_PFP").hide();
+  }
+});
 
 $(".btn").click(function () {
   if (started) {
@@ -77,4 +85,7 @@ function startOver() {
   level = 0;
   gamePattern = [];
   started = false;
+  $(".BUTTON_PFP").show().text("Restart");
 }
+
+$(document).unbind("dblclick");
