@@ -87,5 +87,3 @@ function startOver() {
   started = false;
   $(".BUTTON_PFP").show().text("Restart");
 }
-
-$(document).unbind("dblclick");
